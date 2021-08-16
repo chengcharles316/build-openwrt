@@ -129,21 +129,21 @@ jobs:
           /bin/bash "build/${{matrix.target}}/$DIY_P1_SH"
         fi
         if [ build/${{matrix.target}} != build/openwrt ]; then
-          git clone -b $REPO_BRANCH --single-branch https://github.com/weweyes/openwrt-package package/danshui
+          git clone -b $REPO_BRANCH --single-branch https://github.com/281677160/openwrt-package package/extraapp
         
         
         
-        rm -rf package/danshui/luci-app-jd-dailybonus
-        rm -rf package/danshui/luci-theme-atmaterial
-        rm -rf package/danshui/luci-theme-edge
-        rm -rf package/danshui/luci-theme-infinityfreedom
-        rm -rf package/danshui/luci-app-dnsfilter
-        rm -rf package/danshui/luci-theme-opentopd
-        rm -rf package/danshui/luci-theme-rosy
-        rm -rf package/danshui/luci-app-eqos
-        rm -rf package/danshui/luci-app-control-weburl
-        rm -rf package/danshui/luci-app-oaf
-        rm -rf package/danshui/luci-app-serverchan
+        rm -rf package/extraapp/luci-app-jd-dailybonus
+        rm -rf package/extraapp/luci-theme-atmaterial
+        rm -rf package/extraapp/luci-theme-edge
+        rm -rf package/extraapp/luci-theme-infinityfreedom
+        rm -rf package/extraapp/luci-app-dnsfilter
+        rm -rf package/extraapp/luci-theme-opentopd
+        rm -rf package/extraapp/luci-theme-rosy
+        rm -rf package/extraapp/luci-app-eqos
+        rm -rf package/extraapp/luci-app-control-weburl
+        rm -rf package/extraapp/luci-app-oaf
+        rm -rf package/extraapp/luci-app-serverchan
         
         
         fi
