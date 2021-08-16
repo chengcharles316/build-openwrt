@@ -16,6 +16,7 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/extraa
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced package/extraapp/luci-app-advanced
 git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset package/extraapp/luci-app-autotimeset
 git clone --depth=1 https://github.com/weweyes/luci-theme-opentopd-backup package/extraapp/luci-theme-opentopd
+git clone --depth=1 https://github.com/qianmuyixiao/luci-app-eqos package/extraapp/luci-app-eqos
 
 #添加主题theme
 git clone --depth=1 https://github.com/i028/luci-theme-netgear package/extratheme/luci-theme-netgear
