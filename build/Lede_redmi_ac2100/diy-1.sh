@@ -20,6 +20,7 @@ git clone --depth=1 https://github.com/weweyes/luci-theme-opentopd-backup packag
 #添加主题theme
 git clone --depth=1 https://github.com/i028/luci-theme-netgear package/extratheme/luci-theme-netgear
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/extratheme/luci-theme-infinityfreedom
+
  #添加动态你DDNS
 git clone --depth 1 https://github.com/small-5/ddns-scripts-dnspod package/lean/ddns-scripts_dnspod
 git clone --depth 1 https://github.com/small-5/ddns-scripts-aliyun package/lean/ddns-scripts_aliyun
