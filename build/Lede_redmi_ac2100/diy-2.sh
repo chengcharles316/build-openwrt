@@ -17,6 +17,10 @@ sed -i "s/OpenWrt /RMIop build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" packag
 # 设置路由器登陆密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
+# 替换自己的banner文件
+pushd package/base-files/files/etc
+cp -f $GITHUB_WORKSPACE/build/Lede_redmi_ac2100/diy/package/base-files/files/etc/banner banner
+popd
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
 #sed -i 's/"BaiduPCS Web"/"百度网盘"/g' package/lean/luci-app-baidupcs-web/luasrc/controller/baidupcs-web.lua
