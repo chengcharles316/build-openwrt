@@ -9,7 +9,14 @@
 # 软件包地址：https://github.com/281677160/openwrt-package
 #git clone https://github.com/weweyes/OpenAppFilter.git package/luci-app-oaf
 
-git clone https://github.com/weweyes/luci-theme-opentopd-backup package/luci-theme-opentopd
-git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
-git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
+#git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+
+git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
+git clone --depth=1 https://github.com/weweyes/luci-theme-opentopd-backup package/luci-theme-opentopd
+git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
+
+sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+sed -i '$a src-git clash https://github.com/vernesong/OpenClash' feeds.conf.default
