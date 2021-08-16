@@ -10,11 +10,24 @@
 #git clone https://github.com/weweyes/OpenAppFilter.git package/luci-app-oaf
 
 #git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
-git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
-git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
-git clone --depth=1 https://github.com/weweyes/luci-theme-opentopd-backup package/luci-theme-opentopd
-git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
+# 添加applications
+git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/extraapp/luci-app-oaf
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced package/extraapp/luci-app-advanced
+git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset package/extraapp/luci-app-autotimeset
+git clone --depth=1 https://github.com/weweyes/luci-theme-opentopd-backup package/extraapp/luci-theme-opentopd
+
+#添加主题theme
+git clone --depth=1 https://github.com/i028/luci-theme-netgear package/extratheme/luci-theme-netgear
+git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/extratheme/luci-theme-infinityfreedom
+ #添加动态你DDNS
+git clone --depth 1 https://github.com/small-5/ddns-scripts-dnspod package/lean/ddns-scripts_dnspod
+git clone --depth 1 https://github.com/small-5/ddns-scripts-aliyun package/lean/ddns-scripts_aliyun
+svn co https://github.com/openwrt/packages/branches/openwrt-18.06/net/ddns-scripts feeds/packages/net/ddns-scripts
+svn co https://github.com/openwrt/luci/branches/openwrt-18.06/applications/luci-app-ddns feeds/luci/applications/luci-app-ddns
+svn co https://github.com/QiuSimons/OpenWrt_luci-app/trunk/others/luci-app-tencentddns package/lean/luci-app-tencentddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns feeds/luci/applications/luci-app-aliddns
+ln -sf ../../../feeds/luci/applications/luci-app-aliddns ./package/feeds/luci/luci-app-aliddns
 
 sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
